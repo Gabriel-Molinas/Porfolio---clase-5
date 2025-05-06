@@ -1,0 +1,92 @@
+/* Efecto de cursor parpadeante */
+.cursor {
+    color: #0dcaf0;
+    font-weight: bold;
+    animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Estilos generales */
+body {
+    padding-top: 56px; /* Para compensar la navbar fixed-top */
+    background-color: #121212;
+    color: #f8f9fa;
+}
+
+section {
+    padding: 60px 0;
+}
+
+/* Colores personalizados */
+.bg-purple {
+    background-color: #6f42c1;
+}
+
+.text-purple {
+    color: #8a63d2;
+}
+
+.bg-dark-subtle {
+    background-color: #212529 !important;
+    color: #e9ecef;
+}
+
+/* Estilos para la sección de inicio */
+#inicio {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Animación para las tarjetas de habilidades */
+.card {
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+    border-color: #0dcaf0 !important;
+}
+
+.card-img-top {
+    border-bottom: 1px solid #2c3136;
+    transition: all 0.3s ease;
+}
+
+.card:hover .card-img-top {
+    opacity: 0.9;
+}
+
+/* Estilo para inputs en tema oscuro */
+.form-control {
+    background-color: #2b3035;
+    border-color: #495057;
+    color: #e9ecef;
+}
+
+.form-control:focus {
+    background-color: #2b3035;
+    color: #e9ecef;
+    border-color: #0dcaf0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 202, 240, 0.25);
+}
+
+/* Estilo para labels */
+.form-label {
+    color: #e9ecef;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    #inicio {
+        min-height: auto;
+        padding-top: 2rem;
+    }
+}
